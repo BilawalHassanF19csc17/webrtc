@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001');
+const socket = io('https://webrtc-production-2ed7.up.railway.app/');
 
 export default function Home() {
   const localVideoRef = useRef(null);
@@ -111,5 +111,5 @@ export default function Home() {
       <button onClick={startScreenShare}>Share Screen</button>
       <div>Status: {connectionStatus}</div>
     </div>
-  );
+  );                  
 }
